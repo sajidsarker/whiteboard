@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+<meta charset="UTF-8">
+	<title>Whiteboard</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzlebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+	<div class="wb-nav">
+		<a href="{{ url_for('index') }}">Whiteboard</a>
+		<a href="{{ url_for('comments') }}">Comments</a>
+		<a class="active" href="{{ url_for('users') }}">Users</a>
+		<a href="{{ url_for('submit_post') }}">Submit</a>
+		<a href="{{ url_for('login') }}">Login</a>
+		<a href="{{ url_for('signup') }}">Signup</a>
+		<div class="search-container">
+			<form action="">
+				<input type="text" placeholder="Search ..." name="search">
+				<button type="submit"><i class="fas fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+	<div class="wb-card-post">
+	</div>
+</body>
+</html>

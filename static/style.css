@@ -1,0 +1,151 @@
+/* Whiteboard CSS Stylesheet */
+body {
+	margin: 0px;
+	margin-left: 10%;
+	padding: 0px;
+	width: 80%;
+	background-color: #fff;
+	color: #000;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+a:link, a:visited {
+	color: #308dff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.wb-nav {
+	overflow: hidden;
+	width: 100%;
+	margin: 0px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 0px;
+	background-color: #fff;
+}
+
+.wb-nav a:link, .wb-nav a:visited {
+	margin: 0px;
+	padding: 14px;
+	border-radius: 5px;
+	display: inline-block;
+	color: black;
+	font-size: 10pt;
+	text-align: center;
+	text-decoration: none;
+}
+
+.wb-nav a:hover {
+	background-color: #ddd;
+	color: #000;
+}
+
+.wb-nav a.active {
+	background-color: #ff7f30;
+	color: #fff;
+}
+
+.wb-nav .search-container {
+	float: right;
+}
+
+.wb-nav input[type=text] {
+	padding: 3px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 10pt;
+}
+
+.wb-nav .search-container button {
+	float: right;
+	padding: 3px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-right: 0px;
+	background-color: #ddd;
+	border: none;
+	cursor: pointer;
+}
+
+.wb-card-post {
+	margin: -1px;
+	padding: 0px;
+	width: 100%;
+	border: 1px #eee solid;
+}
+
+.wb-card-post:hover {
+	border: 1px #fff solid;
+	outline: 1px #ddd solid;
+}
+
+.wb-card-upvote {
+	float: right;
+	padding: 10px;
+	font-size: 10pt;
+	text-decoration: none;
+}
+
+.wb-card-upvote a {
+	padding: 5px;
+	border-radius: 4px;
+	color: #ff7f30;
+	background-color: #eee;
+}
+
+.wb-card-upvote a:hover {
+	padding: 5px;
+	border-radius: 4px;
+	color: #fff;
+	background-color: #ff7f30;
+}
+
+.wb-card-content {
+	padding: 10px;
+}
+
+.wb-card-comment {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+.wb-card-comment a {
+	padding: 5px;
+	border-radius: 4px;
+	color: #ff7f30;
+	background-color: #eee;
+}
+
+.wb-card-comment a:hover {
+	padding: 5px;
+	border-radius: 4px;
+	color: #fff;
+	background-color: #ff7f30;
+}
+
+.wb-card-subtext {
+	font-size: 8pt;
+	color: gray;
+}
+
+.wb-card-subtext a {
+	color: gray;
+	text-decoration: none;
+}
+
+.wb-card-subtext a:hover {
+	color: gray;
+	text-decoration: underline;
+}
+
+.wb-load-more {
+	font-size: 10pt;
+	text-align: center;
+}
