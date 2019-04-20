@@ -3,17 +3,21 @@
 <head>
 <meta charset="UTF-8">
 	<title>Whiteboard</title>
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzlebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
 	<div class="wb-nav">
-		<a href="{{ url_for('index') }}">Whiteboard</a>
-		<a href="{{ url_for('comments') }}">Comments</a>
-		<a class="active" href="{{ url_for('users') }}">Users</a>
-		<a href="{{ url_for('submit_post') }}">Submit</a>
-		<a href="{{ url_for('login') }}">Login</a>
-		<a href="{{ url_for('signup') }}">Signup</a>
+                <a href="{{ url_for('index') }}">Whiteboard</a>
+                <a href="{{ url_for('comments') }}">Comments</a>
+                <a class="active" href="{{ url_for('u') }}">Users</a>
+                {% if session['logged_in'] %}
+                <a href="{{ url_for('submit_post') }}">Submit</a>
+                <a href="{{ url_for('profile') }}">{{ session['username'] }}</a>
+                {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('signup') }}">Signup</a>
+                {% endif %}
 		<div class="search-container">
 			<form action="">
 				<input type="text" placeholder="Search ..." name="search">
@@ -21,7 +25,12 @@
 			</form>
 		</div>
 	</div>
+	{% for user in users %}
 	<div class="wb-card-post">
+		<div class="wb-card-content">
+			u/{{ user[0] }}
+		</div>
 	</div>
+	{% endfor %}
 </body>
 </html>

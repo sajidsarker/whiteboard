@@ -8,11 +8,16 @@
 </head>
 <body>
 	<div class="wb-nav">
-		<a href="{{ url_for('index') }}">Whiteboard</a>
-		<a href="{{ url_for('comments') }}">Comments</a>
-		<a href="{{ url_for('u') }}">Users</a>
-		<a href="{{ url_for('login') }}">Login</a>
-		<a class="active" href="{{ url_for('signup') }}">Signup</a>
+                <a href="{{ url_for('index') }}">Whiteboard</a>
+                <a class="active" href="{{ url_for('comments') }}">Comments</a>
+                <a href="{{ url_for('u') }}">Users</a>
+                {% if session['logged_in'] %}
+                <a href="{{ url_for('submit_post') }}">Submit</a>
+                <a href="{{ url_for('profile') }}">{{ session['username'] }}</a>
+                {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('signup') }}">Signup</a>
+                {% endif %} 
 		<div class="search-container">
 			<form action="">
 				<input type="text" placeholder="Search ..." name="search">
@@ -21,20 +26,6 @@
 		</div>
 	</div>
 	<div class="wb-card-post">
-		<div class="wb-card-content">
-			<strong>Signup</strong>
-		</div>
-	</div>
-	<div class="wb-card-post">
-		<div class="wb-card-content">
-			<form method="POST" action="">
-				Username:<br>
-				<input type="text" name="user_username"><br>
-				Password:<br>
-				<input type="password" name="user_password"><br>
-				<input type="submit" value="Signup">
-			</form>
-		</div>
 	</div>
 </body>
 </html>

@@ -12,8 +12,8 @@
                 <a href="{{ url_for('comments') }}">Comments</a>
                 <a href="{{ url_for('u') }}">Users</a>
                 {% if session['logged_in'] %}
-                <a class="active" href="{{ url_for('submit_post') }}">Submit</a>
-                <a href="{{ url_for('profile') }}">{{ session['username'] }}</a>
+                <a href="{{ url_for('submit_post') }}">Submit</a>
+                <a class="active" href="{{ url_for('login') }}">{{ session['username'] }}</a>
                 {% else %}
                 <a href="{{ url_for('login') }}">Login</a>
                 <a href="{{ url_for('signup') }}">Signup</a>
@@ -27,21 +27,17 @@
 	</div>
 	<div class="wb-card-post">
 		<div class="wb-card-content">
-			<strong>Submit</strong>
+			<strong>u/{{ session['username'] }}</strong>
 		</div>
-	</div>
+	</div>	
 	<div class="wb-card-post">
 		<div class="wb-card-content">
-			<form>
-				Subject:<br>
-				<input type="text"><br>
-				URL:<br>
-				<input type="text"><br>
-				Text:<br>
-				<textarea></textarea><br>
-				<input type="submit" value="Post">
-			</form>
+			Date Joined: [...]
+			<br><br>
+			<a href="{{ url_for('logout') }}">Logout</a>
 		</div>
 	</div>
+	<div class="wb-card-post"><div class="wb-card-content"><strong>Posts</strong></div></div>
+	<div class="wb-card-post"><div class="wb-card-content"><strong>Comments</strong></div></div>
 </body>
 </html>
