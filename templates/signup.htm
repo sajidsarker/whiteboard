@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 	<title>Whiteboard</title>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzlebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
 	<div class="wb-nav">
@@ -16,7 +15,7 @@
 		<div class="search-container">
 			<form action="">
 				<input type="text" placeholder="Search ..." name="search">
-				<button type="submit"><i class="fas fa-search"></i></button>
+				<button type="submit"><img src="{{ url_for('static', filename='search-icon.png') }}" width=18 height=18></button>
 			</form>
 		</div>
 	</div>

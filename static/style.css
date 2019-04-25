@@ -19,20 +19,27 @@ a:hover {
 	text-decoration: underline;
 }
 
+button {
+	margin: 0px;
+	margin-top: 20px;
+}
+
 .wb-nav {
 	overflow: hidden;
 	width: 100%;
 	margin: 0px;
-	margin-top: 10px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	padding: 0px;
+	border-bottom: 1px solid #aaa;
+	outline: 1px solid #ddd;
 	background-color: #fff;
 }
 
 .wb-nav a:link, .wb-nav a:visited {
 	margin: 0px;
+	margin-right: -5px;
 	padding: 14px;
-	border-radius: 5px;
 	display: inline-block;
 	color: black;
 	font-size: 10pt;
@@ -66,8 +73,8 @@ a:hover {
 	padding: 3px;
 	margin-top: 8px;
 	margin-bottom: 8px;
-	margin-right: 0px;
-	background-color: #ddd;
+	margin-right: 14px;
+	background-color: #fff;
 	border: none;
 	cursor: pointer;
 }
