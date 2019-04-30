@@ -79,6 +79,10 @@ button {
 	cursor: pointer;
 }
 
+.wb-nac .search-container button:hover {
+	background-color: #eee;
+}
+
 .wb-card-post {
 	margin: -1px;
 	padding: 0px;
